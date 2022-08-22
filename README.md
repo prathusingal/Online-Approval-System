@@ -1,6 +1,6 @@
 ## Online Approval System Demo ##
 
-![Demo](https://github.com/prathusingal/Online-Sanction-System/blob/master/Images/Online%20Approval%20System%20Video.gif)
+![Demo](https://github.com/prathusingal/Online-Approval-System/blob/master/Images/Online%20Approval%20System%20Video.gif)
 
 ## About ##
 
