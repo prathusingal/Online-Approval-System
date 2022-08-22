@@ -1,0 +1,77 @@
+{%extends "Student/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+	<!-- Slider Area Start-->
+	<div class="services-area">
+		<div class="container">
+			<!-- Section-tittle -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-tittle text-center mb-80">
+						<h2>EDIT PROFILE</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Slider Area End-->
+
+	<!-- Start Sample Area -->
+
+
+	<!-- Start Align Area -->
+<div data-background="{% static 'assets/img/shape/footer_bg.png' %}">
+<div class="container">
+  <div class="section-top-border">
+    <div class="row">
+      <div class="col-lg-12 col-md-8">
+        <!-- <h5 class="mb-30">Form Element</h5> -->
+        <form class="" role="form" action="." method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                {% if field.errors %}
+                <div class="form-group">
+                  <div class="form-group">
+                    <label class="control-label" for="id_{{ field.name }}"><h6 class="">{{ field.label }}</h6></label>
+                    <div class="">
+                        {{ field|attr:"class:single-input" }}
+                        <span class="help-block">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                  </div>
+                  </div>
+                  </div>
+                {% else %}
+                    <div class="form-group">
+                      <div class="form-group">
+                        <label class="control-label" for="id_{{ field.name }}"><h6 class="">{{ field.label }}</h6></label>
+                        <div class="">
+                            {{ field|attr:"class:single-input" }}
+                      </div>
+
+                            {% if field.help_text %}
+                                <p class="help-block"><small>{{ field.help_text }}</small></p>
+                            {% endif %}
+                            {% if field.field.widget.input_type == 'select' %}
+                                <br><br>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

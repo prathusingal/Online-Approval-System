@@ -1,0 +1,20 @@
+{% extends 'Student/base.html' %}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+<div class="container">
+    <h1>Profile</h1>
+    <p>Username: {{ user }}</p>
+    <p>Name: {{ user.userprofile.full_name }}</p>
+    <p>Student Id: {{ user.userprofile.sid }}</p>
+    <p>Branch: {{ user.userprofile.branch }}</p>
+    <p>Year: {{ user.userprofile.year }}</p>
+    <p>Gender: {{ user.userprofile.gender}}</p>
+    <p>DOB: {{ user.userprofile.DOB }}</p>
+    <p>Mobile Number: {{ user.userprofile.mobile_number }}</p>
+    <p>Email: {{ user.userprofile.email }}</p>
+    {% if user.userprofile.image %}
+    <img src="{{ user.userprofile.image.url }}" width="240">
+    {% endif %}
+</div>
+
+{% endblock %}

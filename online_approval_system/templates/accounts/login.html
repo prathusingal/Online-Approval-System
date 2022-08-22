@@ -1,0 +1,212 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Online Approval System</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+		<!-- CSS here -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+						<link rel="icon" type="image/png" href="{% static 'login/images/icons/favicon.ico' %}"/>
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/bootstrap/css/bootstrap.min.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animate/animate.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/css-hamburgers/hamburgers.min.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animsition/css/animsition.min.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/select2/select2.min.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/vendor/daterangepicker/daterangepicker.css' %}">
+					<!--===============================================================================================-->
+						<link rel="stylesheet" type="text/css" href="{% static 'login/css/util.css' %}">
+						<link rel="stylesheet" type="text/css" href="{% static 'login/css/main.css' %}">
+					<!--===============================================================================================-->
+   </head>
+
+   <body>
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'assets/img/logo/pec3.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+		<main>
+
+		    <!-- Slider Area Start-->
+		    <div class="slider-area ">
+		        <div class="slider-active">
+		            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}">
+		                <div class="container">
+		                    <div class="row d-flex align-items-center">
+		                        <div class="col-lg-5 col-md-9 ">
+		                            <div class="hero__caption">
+																		<h1>LOGIN</h1>
+																		<form method="post" action="{% url 'account:user_login' %}">
+
+
+																		<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+																			<input class="input100" type="text" name="username" placeholder="Username">
+																			<span class="focus-input100"></span>
+																		</div>
+
+
+																		<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+																			<input class="input100" type="password" name="password" placeholder="Password">
+																			<span class="focus-input100"></span>
+																		</div>
+																		<div class="container-login100-form-btn m-t-17">
+																			<input type="submit" value="login" class="login100-form-btn">
+																		</div>
+																		</form>
+		                            </div>
+		                        </div>
+														<div class="col-lg-2">
+
+														</div>
+		                        <div class="col-lg-5">
+		                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+		                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}a">
+		                <div class="container">
+		                    <div class="row d-flex align-items-center">
+		                        <div class="col-lg-5 col-md-9 ">
+
+
+		                            <div class="hero__caption">
+																		<h1>LOGIN</h1>
+																	<form method="post" action="{% url 'account:user_login' %}">
+
+
+																	<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+																		<input class="input100" type="text" name="username" placeholder="Username">
+																		<span class="focus-input100"></span>
+																	</div>
+
+
+																	<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+																		<input class="input100" type="password" name="password" placeholder="Password">
+																		<span class="focus-input100"></span>
+																	</div>
+																	<div class="container-login100-form-btn m-t-17">
+																		<input type="submit" value="login" class="login100-form-btn">
+																	</div>
+																	</form>
+                                  {% if messages %}
+                                   <ul class="messages">
+                                    {% for message in messages %}
+                                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                    {% endfor %}
+                                  </ul>
+                                {% endif %}
+
+		                            </div>
+		                        </div>
+														<div class="col-lg-2">
+
+														</div>
+		                        <div class="col-lg-5">
+		                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+		                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <!-- Slider Area End-->
+	<!-- JS here -->
+
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/slick.min.js' %}"></script>
+        <!-- Date Picker -->
+        <script src="{% static 'assets/js/gijgo.min.js' %}"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+		<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="{% static 'assets/js/jquery.scrollUp.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+
+        <!-- contact js -->
+        <script src="{% static 'assets/js/contact.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.form.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'assets/js/mail-script.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.ajaxchimp.min.js'%}"></script>
+
+		<!-- Jquery Plugins, main Jquery -->
+        <script src="{% static 'assets/js/plugins.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+				<!--===============================================================================================-->
+					<script src="{% static 'login/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+				<!--===============================================================================================-->
+					<script src="{% static 'login/vendor/animsition/js/animsition.min.js' %}"></script>
+				<!--===============================================================================================-->
+					<script src="{% static 'login/vendor/bootstrap/js/popper.js' %}"></script>
+					<script src="{% static 'login/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+				<!--===============================================================================================-->
+					<script src="{% static 'login/vendor/select2/select2.min.js' %}"></script>
+				<!--===============================================================================================-->
+					<script src="{% static 'login/vendor/daterangepicker/moment.min.js' %}"></script>
+					<script src="{% static 'login/vendor/daterangepicker/daterangepicker.js' %}"></script>
+				<!--===============================================================================================-->
+					<script src="{% static 'login/vendor/countdowntime/countdowntime.js' %}"></script>
+				<!--===============================================================================================-->
+					<script src="{% static 'login/js/main.js' %}"></script>
+
+
+    </body>
+</html>

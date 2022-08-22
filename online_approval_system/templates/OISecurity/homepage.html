@@ -1,0 +1,61 @@
+{%extends "OISecurity/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+<main>
+    <!-- Slider Area Start-->
+    <br><br>
+    <div class="slider-area ">
+        <div class="slider-active">
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-7 col-md-9 ">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Lecture Hall Requests<br> </h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
+                                <!-- Hero-btn -->
+                                <div class="button-group-area mt-40">
+                                  <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                      <a href="{% url 'account:OISecurity_LH_List' %}" class="btn hero-btn">Approve/Dissaprove</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}a">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-7 col-md-9 ">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Auditorium<br> </h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
+                                <!-- Hero-btn -->
+                                <div class="button-group-area mt-40">
+                                  <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                      <a href="{% url 'account:OISecurity_LH_List' %}" class="btn hero-btn">Approve/Dissaprove</a>
+                                  </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider Area End-->
+</main>
+  {%endblock%}

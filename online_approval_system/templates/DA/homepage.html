@@ -1,0 +1,219 @@
+{%extends "DA/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+<main>
+    <!-- Slider Area Start-->
+    <br><br>
+    <div class="slider-area ">
+        <div class="slider-active">
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-7 col-md-9 ">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Auditorium<br> </h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
+                                <!-- Hero-btn -->
+                                <div class="button-group-area mt-40">
+                                  <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                      <a href="{% url 'account:DA_Auditorium_List' %}" class="btn">Approve/Disapprove</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}a">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-7 col-md-9 ">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Auditorium<br> </h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
+                                <!-- Hero-btn -->
+                                <div class="button-group-area mt-40">
+                                  <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                      <a href="{% url 'account:DA_Auditorium_List' %}" class="btn">Approve/Disapprove</a>
+                                  </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider Area End-->
+
+    <!-- We Create Start -->
+    <div class="slider-area ">
+        <div class="slider-active">
+          <div class="single-slider slider-height we-create-area create-padding">
+              <div class="container">
+                  <div class="row d-flex align-items-end">
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-img" data-animation="fadeInLeft" data-delay="3s">
+                              <img src="{% static 'assets/img//service/we-create.png' %}" alt="">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-cap">
+                              <h3 data-animation="fadeInRight" data-delay=".4s">Events</h3>
+                              <p data-animation="fadeInRight" data-delay=".4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis orem ipsum dolor sit amet, consectetur adipiscing.</p>
+                              <div class="button-group-area mt-40">
+                                <div class="" data-animation="fadeInRight" data-delay=".8s">
+                                    <a href="{% url 'account:DA_Event_List' %}" class="btn">Approve/Disapprove</a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="single-slider slider-height we-create-area create-padding">
+              <div class="container">
+                  <div class="row d-flex align-items-end">
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-img" data-animation="fadeInLeft" data-delay="3s">
+                              <img src="{% static 'assets/img//service/we-create.png' %}" alt="">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-cap">
+                              <h3 data-animation="fadeInRight" data-delay=".4s">Events</h3>
+                              <p data-animation="fadeInRight" data-delay=".4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis orem ipsum dolor sit amet, consectetur adipiscing.</p>
+                              <div class="button-group-area mt-40">
+                                <div class="" data-animation="fadeInRight" data-delay=".8s">
+                                    <a href="{% url 'account:DA_Event_List' %}" class="btn">Approve/Disapprove</a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- We Create End -->
+
+    <!-- Slider Area Start-->
+    <div class="slider-area ">
+        <div class="slider-active">
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-7 col-md-9 ">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Labs<br> </h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
+                                <!-- Hero-btn -->
+                                <div class="button-group-area mt-40">
+                                  <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                      <a href="{% url 'account:DA_Lab_List' %}" class="btn">Approve/Disapprove</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'assets/img/hero/h1_hero.png' %}a">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-7 col-md-9 ">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInLeft" data-delay=".4s">Labs<br> </h1>
+                                <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
+                                <!-- Hero-btn -->
+                                <div class="button-group-area mt-40">
+                                  <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                      <a href="{% url 'account:DA_Lab_List' %}" class="btn">Approve/Disapprove</a>
+                                  </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                                <img src="{% static 'assets/img/hero/hero_right.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider Area End-->
+
+    <!-- We Create Start -->
+    <div class="slider-area ">
+        <div class="slider-active">
+          <div class="single-slider slider-height we-create-area create-padding">
+              <div class="container">
+                  <div class="row d-flex align-items-end">
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-img" data-animation="fadeInLeft" data-delay="6s">
+                              <img src="{% static 'assets/img//service/we-create.png' %}" alt="">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-cap">
+                              <h3 data-animation="fadeInRight" data-delay=".4s">Reimbursements</h3>
+                              <p data-animation="fadeInRight" data-delay=".4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis orem ipsum dolor sit amet, consectetur adipiscing.</p>
+                              <div class="button-group-area mt-40">
+                                <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                    <a href="{% url 'account:DA_Reimbursement_List' %}" class="btn hero-btn">Approve/Dissaprove</a>
+                                </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="single-slider slider-height we-create-area create-padding">
+              <div class="container">
+                  <div class="row d-flex align-items-end">
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-img" data-animation="fadeInLeft" data-delay="6s">
+                              <img src="{% static 'assets/img//service/we-create.png' %}" alt="">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12">
+                          <div class="we-create-cap">
+                              <h3 data-animation="fadeInRight" data-delay=".4s">Reimbursements</h3>
+                              <p data-animation="fadeInRight" data-delay=".4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis orem ipsum dolor sit amet, consectetur adipiscing.</p>
+                              <div class="button-group-area mt-40">
+                                <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                    <a href="{% url 'account:DA_Reimbursement_List' %}" class="btn hero-btn">Approve/Dissaprove</a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- We Create End -->
+
+</main>
+  {%endblock%}

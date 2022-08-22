@@ -1,0 +1,33 @@
+{%extends "Student/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+<form method="post">
+  {%csrf_token%}
+  <br><br><br><br><br><br>
+  <div data-background="{% static 'assets/img/shape/footer_bg.png' %}"
+    <div class="container">
+      <h1>PEC University of Technology</h1>
+      <h5><u>PERFORMA FOR BOOKING OF VARIOUS LABS BY STUDENTS.</u></h5><br>
+      <p><strong>Name :&ensp; </strong>{{instance.full_name}}</p>
+      <p><strong>SID :&ensp; </strong>{{instance.sid}}</p>
+      <p><strong>Branch :&ensp; </strong>{{instance.branch}}</p>
+      <p><strong>Year :&ensp; </strong>{{instance.year}}</p>
+      <p><strong>Email :&ensp; </strong>{{instance.email}}</p>
+      <p><strong>Place :&ensp; </strong>{{instance.place}}</p>
+      <p><strong>Department related to project :&ensp; </strong>{{instance.department_related_to_project}}</p>
+      <p><strong>Date from :&ensp; </strong>{{instance.date_from}}</p>
+      <p><strong>Date to :&ensp; </strong>{{instance.date_to}}</p>
+      <p><strong>Time from :&ensp; </strong>{{instance.time_from}}</p>
+      <p><strong>Time to :&ensp; </strong>{{instance.time_to}}</p>
+      <p><strong>Brief project description :&ensp; </strong>{{instance.brief_project_description}}</p>
+      <p><strong>Project report :&ensp; </strong>{{instance.project_report}}</p>
+      <p><strong>HOD Approval :&ensp; </strong>{{instance.HOD_approval}}</p>
+      <p><strong>DA Approval :&ensp; </strong>{{instance.DA_approval}}</p>
+      <p><strong>DSA Approval :&ensp; </strong>{{instance.DSA_approval}}</p>
+      <p><em>Note :&ensp; You will be responsible for any damage in the lab.</em></p><br>
+      <!-- <input type="submit" class="btn hero-btn" value="Print"> -->
+    </div>
+  </div>
+</form>
+{%endblock%}

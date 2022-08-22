@@ -1,0 +1,54 @@
+{%extends "CTS/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+
+
+	<!-- Slider Area Start-->
+	<div class="services-area">
+		<div class="container">
+			<!-- Section-tittle -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-tittle text-center mb-80">
+            <div class="typography">
+						<h2>{{title}}</h2>
+						<!-- <h1>PEC University of Technology</h1>
+						<h5><u>PERFOMA FOR EVENT PERMISSION AND FINANCIAL SANCTION BY CLUBS/SOCIETIES/NSS/NCC</u></h5> -->
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Slider Area End-->
+
+	<!-- Start Sample Area -->
+  <div data-background="{% static 'assets/img/shape/footer_bg.png' %}">
+  <div class="footer-area">
+    <div class="container">
+  <div class="col-lg-4 col-md-4 col-sm-5">
+    <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+        <ul>
+          <br><br>
+          {% if queryset %}
+          {% for x in queryset %}
+            {% if x.type == 'Technical' and x.Secretary_approval == 'approved' and x.CCS_CTS_approval != 'approved' and x.CCS_CTS_approval != 'not approved' %}
+                <li><h2><a href="{% url 'account:CTS_Event_approve' id=x.id %}"> ->&ensp; {{x.event_name}}</h2></li><br>
+          {% endif %}
+
+          {% endfor %}
+            {% else %}
+            <h3><i> No Event requests!</i></h3>
+          {% endif %}
+          <br><br><br>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}

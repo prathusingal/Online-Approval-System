@@ -1,0 +1,43 @@
+{%extends "Secretary/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+<form method="post">
+  {%csrf_token%}
+  <br><br><br><br><br><br>
+  <div data-background="{% static 'assets/img/shape/footer_bg.png' %}">
+    <div class="container">
+      <h1>PEC University of Technology</h1>
+      <h5><u>PERFOMA FOR EVENT PERMISSION AND FINANCIAL SANCTION BY CLUBS/SOCIETIES/NSS/NCC</u></h5><br>
+      <p><strong>Name of Club or Technical Society :&ensp;  </strong>{{instance.name_of_club_or_technical_society}}</p>
+      <p><strong>Type :&ensp;  </strong>{{instance.type}}</p>
+      <p><strong>Secretary Name :&ensp;  </strong>{{instance.secretary_name}}</p>
+      <p><strong>Secretary SID :&ensp;  </strong>{{instance.secretary_SID}}</p>
+      <p><strong>Event Name :&ensp;  </strong>{{instance.event_name}}</p>
+      <p><strong>Date of Event From :&ensp;  </strong>{{instance.date_of_event_from}}</p>
+      <p><strong>Date of Event To :&ensp;  </strong>{{instance.date_of_event_to}}</p>
+      <p><strong>Time of Event From :&ensp;  </strong>{{instance.time_of_event_from}}</p>
+      <p><strong>Time of Event To :&ensp;  </strong>{{instance.time_of_event_to}}</p>
+      <p><strong>Venues :&ensp;  </strong>{{instance.venues}}</p>
+      <p><strong>Brief Event Description :&ensp;  </strong>{{instance.brief_event_description}}</p>
+      <p><strong>Expected Expenditure Description :&ensp;  </strong>{{instance.expected_expenditure_description}}</p>
+      <p><strong>Total Expected Expenditure :&ensp;  </strong>{{instance.total_expected_expenditure}}</p>
+      <p><strong>Advance Required :&ensp;  </strong>{{instance.advance_required}}</p>
+      <p><strong>Advance Required Justification :&ensp;  </strong>{{instance.advance_required_justification}}</p>
+      <p><strong>Advance Amount :&ensp;  </strong>{{instance.advance_amount}}</p>
+      <p><strong>Account Holder Name :&ensp;  </strong>{{instance.account_holder_name}}</p>
+      <p><strong>Account Number :&ensp;  </strong>{{instance.account_number}}</p>
+      <p><strong>IFSC Code :&ensp;  </strong>{{instance.IFSC_code}}</p>
+      <p><strong>PAN Card Number :&ensp;  </strong>{{instance.PAN_card_number}}</p>
+      <p><strong>CCS/CTS Approval :&ensp;  </strong>{{instance.CCS_CTS_approval}}</p>
+      <p><strong>OI Approval :&ensp;  </strong>{{instance.OI_approval}}</p>
+      <p><strong>Chief Advisor Approval :&ensp;  </strong>{{instance.CA_approval}}</p>
+      <p><strong>DA Approval :&ensp;  </strong>{{instance.DA_approval}}</p>
+      <p><strong>DSA Approval :&ensp;  </strong>{{instance.DSA_approval}}</p>
+      <p><strong>Reason for Disapproval :&ensp;  </strong>{{instance.reason_for_disapproval}}</p>
+      <p><em>Note :&ensp;The expenditure will be met out from the respective society/club/NSS/NCC.</em></p><br>
+      <!-- <input type="submit" class="btn hero-btn" value="Print"> -->
+    </div>
+  </div>
+</form>
+{%endblock%}

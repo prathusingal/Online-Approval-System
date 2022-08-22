@@ -1,0 +1,29 @@
+{%extends "Secretary/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+<form method="post">
+  {%csrf_token%}
+  <br><br><br><br><br><br>
+  <div data-background="{% static 'assets/img/shape/footer_bg.png' %}">
+    <div class="container">
+      <h1>PEC University of Technology.</h1>
+      <h5><u>PERFORMA FOR BOOKING OF LECTURE HALLS BY VARIOUS CLUBS/SOCIETIES/NCC/NSS</u></h5><br>
+        <p><strong>Name of Club or Technical Society :  </strong>{{instance.name_of_club_or_technical_society}}</p>
+        <p><strong>Date From :&ensp;  </strong>{{instance.date_from}}</p>
+        <p><strong>Date To :&ensp;  </strong>{{instance.date_to}}</p>
+        <p><strong>Time From :&ensp;  </strong>{{instance.time_from}}</p>
+        <p><strong>Time To :&ensp;  </strong>{{instance.time_to}}</p>
+        <p><strong>Place :&ensp;  </strong>{{instance.place}}</p>
+        <p><strong>Reason :&ensp;  </strong>{{instance.reason}}</p>
+        <p><strong>Secretary Name :&ensp;  </strong>{{instance.secretary_name}}</p>
+        <p><strong>Secretary SID :&ensp;  </strong>{{instance.secretary_SID}}</p>
+        <p><strong>OI Approval :&ensp;  </strong>{{instance.OI_approval}}</p>
+        <p><strong>OISecurity Approval :&ensp;  </strong>{{instance.OISecurity_approval}}</p>
+        <p><strong>Reason For Disapproval :&ensp;  </strong>{{instance.reason_for_disapproval}}</p>
+        <p><em>Note :&ensp;   Organizing Club/Society/NSS/NCC will be responsible for any kind of damage or breakage.</em></p><br>
+        <!-- <input type="submit" class="btn hero-btn" value="Print"> -->
+    </div>
+  </div>
+</form>
+{%endblock%}

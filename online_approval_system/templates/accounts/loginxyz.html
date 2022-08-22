@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{% block body_block %}
+<div class="jumbotron">
+  <h2>Students' Events'/Workshops' Management System</h2>
+  <form method="post" action="{% url 'account:user_login' %}">
+  {% csrf_token %}
+  <label for="username">Enter username:</label>
+  <input type="text" name="username" value="username">
+  <label for="password">Enter Password:</label>
+  <input type="password" name="password" value="password">
+  <input type="submit" value="login">
+  </form>
+  {% if messages %}
+   <ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,132 @@
+{%extends "OI/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+<main>
+    <!-- Slider Area Start-->
+    <br><br>
+    <div class="slider-area">
+        <div class="slider-active">
+            <div class="single-slider slider-height d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-3 d-none d-xl-block">
+                            <div class="hero__img hero__img2 " data-animation="fadeInLeft" data-delay="1s">
+                              {% if request.user.userprofile.profile_pic %}
+                              <div class="profile-circle">
+                                <img style="border-radius: 50%; background-size: cover;" data-background="{{ request.user.userprofile.profile_pic.url }}" alt="" width="500px" height="500px">
+                              </div>
+                              {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-none d-xl-block">
+                        </div>
+                        <div class="col-lg-5 col-md-9 ">
+                              <div class="typography">
+                                <u><h1 style="font-size:60px" data-animation="fadeInRight" data-delay=".4s">{{ request.user.userprofile.full_name }}</h1></u>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slider slider-height d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-3 d-none d-xl-block">
+                            <div class="hero__img hero__img2 " data-animation="fadeInLeft" data-delay="1s">
+                              {% if request.user.userprofile.profile_pic %}
+                              <div class="profile-circle">
+                                <img style="border-radius: 50%; background-size: cover;" data-background="{{ request.user.userprofile.profile_pic.url }}" alt="" width="500px" height="500px">
+                              </div>
+                              {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-none d-xl-block">
+                        </div>
+                        <div class="col-lg-5 col-md-9 ">
+                              <div class="typography">
+                                <u><h1 style="font-size:60px" data-animation="fadeInRight" data-delay=".4s">{{ request.user.userprofile.full_name }}</h1></u>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about shape -->
+        <div class="about-shape">
+            <div class="shape-left">
+                <img src="{% static 'assets/img/hero/about_shape1.png' %}" alt="">
+            </div>
+            <div class="shape-right">
+                <img src="{% static 'assets/img/hero/about-sharpe2.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Slider Area End-->
+    <!-- Generating Start -->
+    <br><br><br>
+    <div class="generating-area ">
+        <div class="container">
+             <!-- Section-tittle -->
+             <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-tittle text-center">
+                        <h2>About</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-generating d-flex mb-30">
+                        <div class="generating-icon">
+                            <span class="flaticon-chart"></span>
+                        </div>
+                        <div class="generating-cap">
+                            <h4>Email : {{ request.user.userprofile.email }}</h4>
+                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
+                                se ultrices gravida. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-generating d-flex mb-30">
+                        <div class="generating-icon">
+                            <span class="flaticon-social-media-marketing"></span>
+                        </div>
+                        <div class="generating-cap">
+                            <h4>Contact : {{ request.user.userprofile.mobile_number }}</h4>
+                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
+                                se ultrices gravida. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-generating d-flex mb-30">
+                        <div class="generating-icon">
+                            <span class="flaticon-speaker"></span>
+                        </div>
+                        <div class="generating-cap">
+                            <h4>DOB : {{ request.user.userprofile.DOB }}</h4>
+                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
+                                se ultrices gravida. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-generating d-flex mb-30">
+                        <div class="generating-icon">
+                            <span class="flaticon-growth"></span>
+                        </div>
+                        <div class="generating-cap">
+                            <h4>{{ request.user.userprofile.society_or_club_name }} {{ request.user.userprofile.role }}</h4>
+                            <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Generating End -->
+    <br><br><br><br>
+</main>
+{% endblock %}

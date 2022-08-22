@@ -1,0 +1,108 @@
+{%extends "OI/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+<br><br><br><br>
+	<!-- Slider Area Start-->
+	<div class="container">
+		<div data-background="{% static 'assets/img/shape/footer_bg.png' %}">
+			<br>
+	<!-- <div class="services-area"> -->
+		<div class="container">
+
+            <h2 style="text-align:center"><strong>PEC University of Technology</strong></h2>
+            <h6 style="text-align:center"><u><strong>PERFORMA FOR BOOKING OF AUDITORIUM BY CLUBS/SOCIETIES/NSS/NCC</strong></u></h6>
+					</div>
+	<!-- Start Align Area -->
+		<div class="container">
+
+<div class="container">
+  <div class="section-top-border">
+    <div class="row">
+      <div class="col-lg-12 col-md-8">
+        <!-- <h5 class="mb-30">Form Element</h5> -->
+        <form class="" role="form" action="." method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+						<h4><strong>Aditorium Details:</strong></h4>
+            {% for field in form1 %}
+                {% if field.errors %}
+								<div class="form-group">
+									<div class="form-group">
+										<label class="control-label" for="id_{{ field.name }}"><h6 class="">{{ field.label }}</h6></label>
+										<div class="">
+												{{ field|attr:"class:single-input" }}
+												<span class="help-block">
+														{% for error in  field.errors %}{{ error }}{% endfor %}
+												</span>
+									</div>
+									</div>
+									</div>
+                {% else %}
+                    <div class="form-group">
+                      <div class="form-group">
+                        <label class="control-label" for="id_{{ field.name }}"><h6 class="">{{ field.label }}</h6></label>
+                        <div class="">
+                            {{ field|attr:"class:single-input" }}
+                      </div>
+
+                            {% if field.help_text %}
+                                <p class="help-block"><small>{{ field.help_text }}</small></p>
+                            {% endif %}
+                            {% if field.field.widget.input_type == 'select' %}
+                                <br><br>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+						<br><br>
+						<h4><strong>Approve/Disapprove:</strong></h4>
+						{% for field in form %}
+                {% if field.errors %}
+								<div class="form-group">
+									<div class="form-group">
+										<label class="control-label" for="id_{{ field.name }}"><h6 class="">{{ field.label }}</h6></label>
+										<div class="">
+												{{ field|attr:"class:single-input" }}
+												<span class="help-block">
+														{% for error in  field.errors %}{{ error }}{% endfor %}
+												</span>
+									</div>
+									</div>
+									</div>
+                {% else %}
+                    <div class="form-group">
+                      <div class="form-group">
+                        <label class="control-label" for="id_{{ field.name }}"><h6 class="">{{ field.label }}</h6></label>
+                        <div class="">
+                            {{ field|attr:"class:single-input" }}
+                      </div>
+
+                            {% if field.help_text %}
+                                <p class="help-block"><small>{{ field.help_text }}</small></p>
+                            {% endif %}
+                            {% if field.field.widget.input_type == 'select' %}
+                                <br><br>
+                            {% endif %}
+                            {% endif %}
+
+                        </div>
+                    </div>
+            {% endfor %}
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Approve/Disapprove</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+	<!-- End Align Area -->
+{% endblock %}

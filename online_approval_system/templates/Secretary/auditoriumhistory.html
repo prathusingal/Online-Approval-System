@@ -1,0 +1,104 @@
+{%extends "Secretary/base.html"%}
+{% block body_block %}
+{% load i18n widget_tweaks %}
+{% load static %}
+	<!-- Slider Area Start-->
+	<div class="services-area">
+		<div class="container">
+			<!-- Section-tittle -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-tittle text-center mb-80">
+            <div class="typography">
+						<h2>{{title}}</h2>
+						<!-- <h1>PEC University of Technology</h1>
+						<h5><u>PERFOMA FOR EVENT PERMISSION AND FINANCIAL SANCTION BY CLUBS/SOCIETIES/NSS/NCC</u></h5> -->
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Slider Area End-->
+
+	<!-- Start Sample Area -->
+  <div data-background="{% static 'assets/img/shape/footer_bg.png' %}">
+  <div class="footer-area ">
+    <div class="row">
+
+
+    <div class="col-lg-1 col-md-1 col-sm-1">
+
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-10">
+      <br><br><br>
+      <div class="row">
+
+
+  <div class="col-lg-4 col-md-4 col-sm-4">
+		<div class="typography">
+
+			<h2 style="text-align:center">Approved Requests</h2>
+		</div>
+    <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+        <ul>
+          <br><br>
+          {% for x in queryset %}
+            {% if x.filed_by == request.user.id and x.DSA_approval == 'approved' %}
+                <li><h2><a href="{% url 'account:auditorium_approved' id=x.id %}">&emsp;&emsp;&emsp;->&ensp;{{x.event_name}}</h2></li><br>
+          {% endif %}
+
+          {% endfor %}
+          <br><br><br>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4">
+		<div class="typography">
+
+			<h2 style="text-align:center">Disapproved Requests</h2>
+		</div>
+    <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+        <ul>
+          <br><br>
+          {% for x in queryset %}
+            {% if x.filed_by == request.user.id and x.DSA_approval == 'not approved' or x.OI_approval == 'not approved' or x.DA_approval == 'not approved' or x.CDGC_approval == 'not approved' %}
+                <li><h2><a href="{% url 'account:auditorium_approved' id=x.id %}">&emsp;&emsp;->&ensp;{{x.event_name}}</h2></li><br>
+          {% endif %}
+
+          {% endfor %}
+          <br><br><br>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4">
+		<div class="typography">
+
+			<h2 style="text-align:center">Pending Requests</h2>
+		</div>
+    <div class="single-footer-caption mb-50">
+      <div class="footer-tittle">
+        <ul>
+          <br><br>
+          {% for x in queryset %}
+            {% if x.filed_by == request.user.id and x.DSA_approval == None and x.DSA_approval != 'not approved' and x.OI_approval != 'not approved' and x.DA_approval != 'not approved' and x.CDGC_approval != 'not approved'   %}
+                <li><h2><a href="{% url 'account:auditorium_approved' id=x.id %}"> &emsp;&emsp; &emsp;->&ensp;{{x.event_name}}</h2></li><br>
+          {% endif %}
+
+          {% endfor %}
+          <br><br><br>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
